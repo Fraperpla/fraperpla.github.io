@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE peaks [
+<!ELEMENT peaks (peak+)>
+<!ELEMENT peak (name,altitude,province,town)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT altitude (#PCDATA)>
+<!ELEMENT province (#PCDATA)>
+<!ELEMENT town (#PCDATA)>
+]>
+<peaks>
+	<peak>
+		<name>Alto de las Barracas</name>
+		<altitude>1839 m</altitude>
+		<province>Valencia</province>
+		<town>Puebla de San Miguel</town>
+	</peak>
+	<peak>
+		<name>Penyagolosa</name>
+		<altitude>1813 m</altitude>
+		<province>Castellón</province>
+		<town>Vistabella del M.</town>
+	</peak>
+	<peak>
+		<name>Cabezo de las Cruces</name>
+		<altitude>1710 m</altitude>
+		<province>Castellón</province>
+		<town>Cortes de Arenoso</town>
+	</peak>
+	<peak>
+		<name>Tossal de Fraga</name>
+		<altitude>1699 m</altitude>
+		<province>Castellón</province>
+		<town>Xodos</town>
+	</peak>
+	<peak>
+		<name>Tossal de els Mollats</name>
+		<altitude>1656 m</altitude>
+		<province>Castellón</province>
+		<town>Vilafranca del Cid</town>
+	</peak>
+	<peak>
+		<name>Cruz de los Tres Reinos</name>
+		<altitude>1560 m</altitude>
+		<province>Valencia</province>
+		<town>Arroyo Cerezo</town>
+	</peak>
+	<peak>
+		<name>Aitana</name>
+		<altitude>1557 m</altitude>
+		<province>Alicante</province>
+		<town>Confrides</town>
+	</peak>
+	<peak>
+		<name>Puig Campana</name>
+		<altitude>1410 m</altitude>
+		<province>Alicante</province>
+		<town>Finestrat</town>
+	</peak>
+	<peak>
+		<name>Montcabrer</name>
+		<altitude>1390 m</altitude>
+		<province>Alicante</province>
+		<town>Cocentaina</town>
+	</peak>
+	<peak>
+		<name>Pla de la Casa</name>
+		<altitude>1379 m</altitude>
+		<province>Alicante</province>
+		<town>Fageca</town>
+	</peak>
+</peaks>
