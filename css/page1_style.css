@@ -1,0 +1,60 @@
+/* style list peaks*/
+.lista{
+    display: flex;
+    justify-content: center;
+}
+
+.lista_picos {
+    list-style-type: square;
+}
+
+.sublista_picos {
+    list-style-type: disc;
+}
+
+/* styles for tables */
+table {
+    text-align: center;
+    border: solid;
+}
+
+th {
+    background-color:#c2dfe3ff;
+    border-width: 1px;
+}
+
+td {
+    background-color: white;
+    border-width: 1px;
+}
+
+.columna {
+    background-color:#c2dfe3ff;
+}
+
+.images{
+    padding: 10px;
+}
+
+/* style list routes*/
+
+li.routes a{
+    color: #253237ff;
+    text-decoration: none;
+}
+
+.routes a:hover {
+    color: blue;
+}
+
+/*descriptive list style*/
+.lista_desc {
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+/* style list routes*/
+.lista_rutas {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}

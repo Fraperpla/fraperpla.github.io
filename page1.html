@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/page1_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hiking in Valencia</title>
+</head>
+
+<body>
+    <!-- Menu -->
+    <header class="container" id="web_title">
+        <div class="col-s-4 col-3"><img class="logo" src="images/hiking_logo-removebg.png" alt="Web_logo"></div>
+        <h1 class="col-s-7 col-8">Hiking in the Valencian Comunity</h1>
+        <nav class="col-s-12 col-12">
+            <ul class="menu_movil menu_drop">
+                <li><a href="#menu" class="size_icon"> <i class="fa fa-bars"></i> </a>
+                    <ul>
+                        <li><a href="index.html">Index</a></li>
+                        <li><a href="page1.html">Routes</a></li>
+                        <li><a href="page2.html">Trails</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="form.html">Questionnaire</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu_pc menu_drop">
+                <li class="col-2 col-s-2"><a href="index.html">Index</a></li>
+                <li class="col-2 col-s-2"><a href="page1.html">Routes</a></li>
+                <li class="col-2 col-s-2"><a href="page2.html">Trails</a></li>
+                <li class="col-2 col-s-2"><a href="gallery.html">Gallery</a></li>
+                <li class="col-2 col-s-2"><a href="form.html">Questionnaire</a></li>
+                <li class="col-2 col-s-2"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!------------------------->
+<main class="container">
+        <section class="lista col-s-12 col-6">
+            <!--Nested list-->
+            <ul class="lista_picos">
+                <h4>Highest peaks by province</h4>
+                <li>Alicante<ul>
+                        <li class="sublista_picos">Aitana</li>
+                        <li class="sublista_picos">Puig Campana</li>
+                        <li class="sublista_picos">Montcabrer</li>
+                        <li class="sublista_picos">Pla de la Casa</li>
+                    </ul>
+                </li>
+                <li>Castellon<ul>
+                        <li class="sublista_picos">Penyagolosa</li>
+                        <li class="sublista_picos">Cabezo de las Cruces</li>
+                        <li class="sublista_picos">Tossal de Fraga</li>
+                        <li class="sublista_picos">Tossal de Els Mollats</li>
+                    </ul>
+                </li>
+                <li>Valencia<ul>
+                        <li class="sublista_picos">Alto de las Barracas</li>
+                        <li class="sublista_picos">Cruz de los Tres Reinos</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--Table-->
+        <section class="col-s-12 col-6">
+            <table id="tablepeaks">
+            </table>
+        </section>
+        <div class="container">
+        <section class="col-s-6 col-6">
+            <h4>Hiking routes</h4>
+            <ol>
+                <li class="routes"><a
+                        href="https://es.wikiloc.com/rutas-senderismo/prv212-xixona-penya-migjorn-xixona-2200031">Xixona-Penya
+                        Migjorn</a></li>
+                <li class="routes"><a
+                        href="https://es.wikiloc.com/rutas-senderismo/prv38-font-de-la-sangonera-1688379">Font
+                        de la
+                        Sangonera (Tavernes de la Valldigna)</a></li>
+                <li class="routes"><a
+                        href="https://es.wikiloc.com/rutas-senderismo/prv182-fageca-pla-de-la-casa-fageca-1290313">Fageca-Pla
+                        de la Casa</a></li>
+                <li class="routes"><a
+                        href="https://es.wikiloc.com/rutas-senderismo/prv234-rio-cazuma-y-la-gola-de-lucino-1230287">Rio
+                        Cazuma y la Gola de Lucino</a></li>
+                <li class="routes"><a
+                        href="https://es.wikiloc.com/rutas-senderismo/aitana-per-port-de-tudons-2519077">Aitana
+                        por
+                        puerto
+                        de Tudons</a></li>
+            </ol>
+        </section>
+        <!--Image 3 with link-->
+        <section class="col-s-6 col-6">
+            <a href="https://senders.femecv.com/es/senderos/index">
+                <img src="images/index/gr7.jpeg" alt="Señal PR (Pequeño recorrido)">
+            </a>
+        </section>
+    </div>
+</main>
+<!--Go up -->
+<div class="go_up">
+    <a href="#web_title"><img src="images/go_up.png" alt="Go up!!!"></a>
+</div>
+    <!--Foot-->
+    <footer>
+        <p id="footer">2023</p>
+    </footer>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xmlhttp.open("GET", "peaks.xml", true);
+        xmlhttp.send();
+        function myFunction(xml) {
+            var x, i, xmlDoc, table;
+            xmlDoc = xml.responseXML;
+            table = "<tr><th>Name</th><th>Altitude</th><th>Province</th><th>Town</th></tr>";
+            x = xmlDoc.getElementsByTagName("peak");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("altitude")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("province")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("town")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+            document.getElementById("tablepeaks").innerHTML = table;
+        }
+    </script>
+</body>
+
+</html>

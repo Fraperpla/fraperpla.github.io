@@ -1,0 +1,14 @@
+.gallery {
+    padding: 10px;
+}
+
+img{
+    opacity: 0.9;
+}
+
+.gallery img:hover {
+    opacity: 1.0;
+  }
+
+
+

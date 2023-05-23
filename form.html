@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/form_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hiking in Valencia</title>
+</head>
+
+<body>
+    <!-- Menu -->
+    <header class="container" id="web_title">
+        <div class="col-s-4 col-3"><img class="logo" src="images/hiking_logo-removebg.png" alt="Web_logo"></div>
+        <h1 class="col-s-7 col-8">Hiking in the Valencian Comunity</h1>
+        <nav class="col-s-12 col-12">
+            <ul class="menu_movil menu_drop">
+                <li><a href="#menu" class="size_icon"> <i class="fa fa-bars"></i> </a>
+                    <ul>
+                        <li><a href="index.html">Index</a></li>
+                        <li><a href="page1.html">Routes</a></li>
+                        <li><a href="page2.html">Trails</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="form.html">Questionnaire</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu_pc menu_drop">
+                <li class="col-2 col-s-2"><a href="index.html">Index</a></li>
+                <li class="col-2 col-s-2"><a href="page1.html">Routes</a></li>
+                <li class="col-2 col-s-2"><a href="page2.html">Trails</a></li>
+                <li class="col-2 col-s-2"><a href="gallery.html">Gallery</a></li>
+                <li class="col-2 col-s-2"><a href="form.html">Questionnaire</a></li>
+                <li class="col-2 col-s-2"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Questionnaire-->
+    <main class="container">
+        <div class="questionnaire">
+            <h2> Questionnaire </h2>
+            <p><b>Answer the following questions:</b></p>
+            <h6>The correct answer adds 2 points, the empty answer does not add or subtract points, and a wrong answer
+                subtracts 1 point.</h6>
+            <p>1.What type of trail is marked with white and yellow signs?</p>
+            <select id="q1">
+                <option name="question1" value="">Select a option</option>
+                <option name="question1" value="PR">Short-distance footpaths (PR)</option>
+                <option name="question1" value="SL">Local Footpaths (SL)</option>
+                <option name="question1" value="GR">Long-distance footpaths (GR)</option>
+                <option name="question1" value="Livestock">Livestock trails</option>
+                <option name="question1" value="IE">Equine Itineraries (IE)</option>
+            </select>
+            <br><br>
+            <p>2.What do you need to make a hiking route?</p>
+            <h6>There are 4 correct answers, each adding 0.5 points and each wrong answer subtracting 0.25 points.</h6>
+            <input type="checkbox" name="question2" value="Philip" id="q21"> Flashlight<br>
+            <input type="checkbox" name="question2" value="Louis" id="q22"> Beer<br>
+            <input type="checkbox" name="question2" value="Genghis" id="q23"> Water<br>
+            <input type="checkbox" name="question2" value="Henry" id="q24"> Flip Flops<br>
+            <input type="checkbox" name="question2" value="Julius" id="q25"> Map or GPS<br>
+            <input type="checkbox" name="question2" value="Genghis" id="q26"> Tennis racket<br>
+            <input type="checkbox" name="question2" value="Henry" id="q27"> Mobile phone<br>
+            <input type="checkbox" name="question2" value="Julius" id="q28"> Videogame
+            <br><br>
+            <p>3. What is the height in meters of the Aitana mountain in Alicante?</p>
+            <input type="question3" name="aitana" id="q3">
+            <br><br>
+            <p>4.In which town is Puig Campana located?</p>
+            <input type="radio" name="question4" value="41" id="q41"> Castellón<br>
+            <input type="radio" name="question4" value="42" id="q42"> Finestrat<br>
+            <input type="radio" name="question4" value="43" id="q43"> Sevilla<br>
+            <input type="radio" name="question4" value="44" id="q44"> Valencia
+            <br><br>
+            <p>5.What color are the local trails marked?</p>
+            <input type="radio" name="question5" value="51" id="q51"> They are not signaled<br>
+            <input type="radio" name="question5" value="52" id="q52"> Red and white<br>
+            <input type="radio" name="question5" value="53" id="q53"> Yellow and white<br>
+            <input type="radio" name="question5" value="54" id="q54"> Green and white
+            <br><br>
+            <button onclick="check()">Check</button>
+            <br>
+            <p id="mark"> </p>
+            <p id="feedback"> </p>
+        </div>
+
+    </main>
+    <!--Go up -->
+    <div class="go_up">
+        <a href="#web_title"><img src="images/go_up.png" alt="Go up!!!"></a>
+    </div>
+    <!--Foot-->
+    <footer>
+        <p id="footer">2023</p>
+    </footer>
+    <script>
+        function check() {
+            var q1 = document.getElementById("q1").value;
+            var q21 = document.getElementById("q21").checked;
+            var q22 = document.getElementById("q22").checked;
+            var q23 = document.getElementById("q23").checked;
+            var q24 = document.getElementById("q24").checked;
+            var q25 = document.getElementById("q25").checked;
+            var q26 = document.getElementById("q26").checked;
+            var q27 = document.getElementById("q27").checked;
+            var q28 = document.getElementById("q28").checked;
+            var q3 = document.getElementById("q3").value;
+            var q41 = document.getElementById("q41").checked;
+            var q42 = document.getElementById("q42").checked;
+            var q43 = document.getElementById("q43").checked;
+            var q44 = document.getElementById("q44").checked;
+            var q51 = document.getElementById("q51").checked;
+            var q52 = document.getElementById("q52").checked;
+            var q53 = document.getElementById("q53").checked;
+            var q54 = document.getElementById("q54").checked;
+
+
+            //we use the variable mark to store the correct and wrong answers
+            var mark = 0;
+            //we use the variable feedback to store the feedback information depends on the answers of the user
+            var feedback = "Feedback: <br>";
+
+            //Check answer 1
+            if (q1 == "PR")
+                mark += 2;
+            else if (q1 == "") {
+                mark = mark;
+                feedback += "Question 1: Short-distance footpaths (PR) is the answer correct<br>";
+            }
+            else {
+                mark -= 1;
+                feedback += "Question 1: Short-distance footpaths (PR) is the answer correct<br>";
+            }
+
+            //Check answer 2 
+            if (q21)
+                mark += 0.5;
+            else
+                feedback += "Question 2: Flashlight is correct <br>";
+            if (q23)
+                mark += 0.5;
+            else
+                feedback += "Question 2: Water is correct <br>";
+            if (q25)
+                mark += 0.5;
+            else
+                feedback += "Question 2: Map or GPS is correct <br>";
+            if (q27)
+                mark += 0.5;
+            else
+                feedback += "Question 2: Mobile phone is correct <br>";
+            if (q22){
+                mark -= 0.25;
+                feedback += "Question 2: Beer is not the correct answer <br>";}
+            if (q24){
+                mark -= 0.25;
+                feedback += "Question 2: Flip Flops is not the correct answer <br>";}
+            if (q26){
+                mark -= 0.25;
+                feedback += "Question 2: Tennis racket is not the correct answer <br>";}
+            if (q28){
+                mark -= 0.25;
+                feedback += "Question 2: Videogame is not the correct answer <br>";}
+
+            //Check answer 3
+            if (q3 == 1557 || q3 == 1.557)
+                mark += 2;
+            else if (q3 == "") {
+                mark = mark;
+                feedback += "Question 3: The correct answer is 1557 meters <br>";
+            }
+            else {
+                mark -= 1;
+                feedback += "Question 3: The correct answer is 1557 meters <br>";
+            }
+
+            //Check answer 4
+            if (q42)
+                mark += 2;
+            else if (q41 || q43 || q44) {
+                mark -= 1;
+                feedback += "Question 4: The correct answer is Finestrat <br>";
+            }
+            else {
+                mark = mark;
+                feedback += "Question 4: The correct answer is Finestrat <br>";
+            }
+
+            //Check answer 5
+            if (q54)
+                mark += 2;
+            else if (q51 || q52 || q53) {
+                mark -= 1;
+                feedback += "Question 5: The correct answer is green and white <br>";
+            }
+            else {
+                mark = mark;
+                feedback += "Question 5: The correct answer is green and white <br>";
+            }
+
+            document.getElementById("mark").innerHTML = "Final mark: " + mark;
+
+
+            if (mark == 10) {
+                feedback = "Perfect!!!! Are you ready to go on a hiking route?";
+                document.getElementById("feedback").innerHTML = feedback;
+            }
+            else
+                document.getElementById("feedback").innerHTML = feedback;
+
+        }
+    </script>
+
+
+</body>
+
+</html>
